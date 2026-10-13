@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Gol Gappa Instagram Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #333; display: flex; flex-wrap: wrap; gap: 40px; padding: 40px; font-family: Nunito, sans-serif; }
+  .art { position: relative; overflow: hidden; flex: none; color: #fff; }
+  .sq { width: 1080px; height: 1080px; }
+  .post { width: 1080px; height: 1440px; }
+  .story { width: 1080px; height: 1920px; }
+  .green {
+    background:
+      radial-gradient(60% 45% at 50% 30%, rgba(52,150,72,.55), rgba(52,150,72,0) 70%),
+      radial-gradient(70% 40% at 50% 100%, rgba(255,190,60,.22), rgba(255,190,60,0) 70%),
+      linear-gradient(180deg, #0d4a22, #062a13);
+  }
+  .cream { background: #fdf0dc; color: #145c25; }
+  .abs { position: absolute; }
+  .c { left: 0; right: 0; text-align: center; }
+  .eyebrow { font: 700 34px/1 Fredoka; letter-spacing: .2em; text-transform: uppercase; color: #ffd23f; }
+  .cream .eyebrow { color: #d8372b; }
+  h1 { font: 700 128px/.95 Fredoka; text-transform: uppercase; }
+  h2 { font: 700 96px/1 Fredoka; }
+  .gold { background: linear-gradient(180deg, #fff6c8, #ffd23f 45%, #e09400); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 6px 0 rgba(0,0,0,.3)); }
+  .pill { display: inline-block; padding: 16px 38px; border-radius: 999px; font: 700 40px/1 Fredoka; background: #d8372b; color: #fff; }
+  .foot { bottom: 56px; font: 700 40px/1 Fredoka; color: #ffd23f; letter-spacing: .02em; }
+  .cream .foot { color: #145c25; }
+  .dish { filter: drop-shadow(0 26px 26px rgba(0,0,0,.4)); object-fit: contain; }
+  .frame { inset: 26px; border: 3px dashed rgba(255,210,63,.45); border-radius: 40px; }
+  .cream .frame { border-color: rgba(216,55,43,.35); }
+  ul.menu { list-style: none; }
+  ul.menu li { display: flex; justify-content: space-between; gap: 20px; padding: 22px 0; border-bottom: 3px dashed rgba(20,92,37,.2); font: 600 50px/1.1 Fredoka; color: #2a1d10; }
+  ul.menu li small { font: 700 30px/1.2 Nunito; color: #6e5a43; text-align: right; max-width: 52%; }
+</style>
+</head>
+<body>
+
+<!-- 1. profile picture: logo inside the circle-safe zone -->
+<div class="art sq green" id="avatar">
+  <img class="abs" src="../../public/img/logo.webp" style="left:110px;top:310px;width:860px;border-radius:40px">
+</div>
+
+<!-- 2-6. highlight covers: one icon in a gold ring, same style for all -->
+<div class="art story green hl" id="hl-menu"><div class="ring"><img src="../../public/img/cut/chaat.webp"></div></div>
+<div class="art story green hl" id="hl-findus"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="#145c25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div></div>
+<div class="art story green hl" id="hl-offers"><div class="ring"><b>£</b></div></div>
+<div class="art story green hl" id="hl-reviews"><div class="ring"><svg viewBox="0 0 24 24" fill="#145c25"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div></div>
+<div class="art story green hl" id="hl-diwali"><div class="ring"><svg viewBox="0 0 80 80"><path d="M40 10c7 10 8 17 0 25-8-8-7-15 0-25Z" fill="#ff8a1a"/><path d="M40 20c3 5 3 9 0 13-3-4-3-8 0-13Z" fill="#fff3b0"/><path d="M8 42h64c-2 15-15 24-32 24S10 57 8 42Z" fill="#b8521b"/></svg></div></div>
+<style>
+  .hl .ring {
+    position: absolute; left: 50%; top: 50%; width: 640px; height: 640px; margin: -320px 0 0 -320px; border-radius: 50%;
+    display: grid; place-items: center; background: radial-gradient(#fffaf0, #fdf0dc 60%, #f7dfbc);
+    box-shadow: 0 0 0 22px #ffd23f, 0 0 0 30px rgba(255,210,63,.3), 0 40px 80px rgba(0,0,0,.4);
+  }
+  .hl .ring img { width: 520px; height: 520px; object-fit: contain; }
+  .hl .ring svg { width: 340px; height: 340px; }
+  .hl .ring b { font: 700 380px/1 Fredoka; color: #145c25; margin-top: -30px; }
+</style>
+
+<!-- 7. post: grand opening announcement -->
+<div class="art post green" id="post-opening">
+  <div class="abs frame"></div>
+  <p class="abs c eyebrow" style="top:110px">Indian street food · Cambridge</p>
+  <h1 class="abs c" style="top:180px">Now<br><span class="gold">opening</span></h1>
+  <img class="abs" src="../../public/img/truck.webp" style="left:90px;top:470px;width:900px;border-radius:32px;border:6px solid #ffd23f;box-shadow:0 30px 60px rgba(0,0,0,.45)">
+  <div class="abs c" style="top:1070px"><span class="pill">Sunday 8 November · Diwali</span></div>
+  <p class="abs c" style="top:1170px;font:700 46px/1.25 Fredoka">Pani puri · Chaat · Vada pav · Dabeli · Chai</p>
+  <p class="abs c foot">golgappa.uk</p>
+</div>
+
+<!-- 8. post: Diwali £1.99 offer -->
+<div class="art post green" id="post-offer">
+  <div class="abs frame"></div>
+  <p class="abs c eyebrow" style="top:110px">Diwali day special</p>
+  <img class="abs dish" src="../../public/img/cut/chaat.webp" style="left:140px;top:160px;width:800px;height:560px">
+  <p class="abs c gold" style="top:700px;font:700 300px/1 Fredoka">£1.99</p>
+  <p class="abs c" style="top:1010px;font:700 58px/1.15 Fredoka">Pani Puri · Dahi Puri · Sev Puri</p>
+  <p class="abs c" style="top:1090px;font:600 42px/1 Fredoka;color:#e6f3df">each, on Sunday 8 November</p>
+  <div class="abs c" style="top:1170px"><span class="pill" style="background:#ffd23f;color:#145c25">Cash only</span></div>
+  <p class="abs c foot">golgappa.uk</p>
+</div>
+
+<!-- 9-12. carousel: the menu -->
+<div class="art post green" id="menu-1">
+  <div class="abs frame"></div>
+  <p class="abs c eyebrow" style="top:150px">Gol Gappa · Cambridge</p>
+  <h1 class="abs c" style="top:230px">What's on<br><span class="gold">the menu</span></h1>
+  <img class="abs dish" src="../../public/img/cut/vadapav.webp" style="left:40px;top:640px;width:520px;height:440px;transform:rotate(-6deg)">
+  <img class="abs dish" src="../../public/img/cut/chaat.webp" style="left:520px;top:600px;width:520px;height:460px;transform:rotate(5deg)">
+  <p class="abs c" style="top:1130px;font:700 50px/1.2 Fredoka">All vegetarian · Swipe →</p>
+  <p class="abs c foot">golgappa.uk</p>
+</div>
+<div class="art post cream" id="menu-2">
+  <div class="abs frame"></div>
+  <img class="abs dish" src="../../public/img/cut/chaat.webp" style="left:290px;top:70px;width:500px;height:360px">
+  <h2 class="abs c" style="top:430px">Chaat</h2>
+  <ul class="abs menu" style="left:110px;right:110px;top:560px">
+    <li>Pani Puri <small>mint &amp; tamarind water</small></li>
+    <li>Dahi Puri <small>yogurt, chutneys, sev</small></li>
+    <li>Sev Puri <small>papdi, potato, sev</small></li>
+    <li>Bhel <small>puffed rice, peanuts</small></li>
+    <li>Aloo Tikki Chaat <small>potato tikki, chickpeas</small></li>
+    <li>Samosa Chaat <small>samosa, yogurt, chutneys</small></li>
+  </ul>
+  <p class="abs c foot">+ Papdi Chaat &amp; Basket Chaat</p>
+</div>
+<div class="art post cream" id="menu-3">
+  <div class="abs frame"></div>
+  <img class="abs dish" src="../../public/img/cut/vadapav.webp" style="left:150px;top:70px;width:380px;height:340px">
+  <img class="abs dish" src="../../public/img/cut/dabeli.webp" style="left:550px;top:80px;width:380px;height:330px">
+  <h2 class="abs c" style="top:430px">Buns &amp; bites</h2>
+  <ul class="abs menu" style="left:110px;right:110px;top:560px">
+    <li>Vada Pav <small>Bombay, butter, masala, cheese</small></li>
+    <li>Dabeli <small>butter, grilled, cheese</small></li>
+    <li>Bombay Sandwiches <small>grilled, paneer tikka</small></li>
+    <li>Aloo Tikki Burger <small>with or without cheese</small></li>
+    <li>Wraps <small>veg, tikki, paneer tikka</small></li>
+    <li>Samosa &amp; Spring Rolls <small>Punjabi, cocktail, cheese</small></li>
+  </ul>
+  <p class="abs c foot">+ Fries &amp; potato wedges</p>
+</div>
+<div class="art post green" id="menu-4">
+  <div class="abs frame"></div>
+  <img class="abs dish" src="../../public/img/cut/lassi.webp" style="left:120px;top:130px;width:420px;height:470px">
+  <img class="abs dish" src="../../public/img/cut/chai.webp" style="left:560px;top:170px;width:400px;height:430px">
+  <h2 class="abs c" style="top:650px">Something to sip</h2>
+  <p class="abs c" style="top:780px;font:700 54px/1.5 Fredoka;color:#e6f3df">Mango Lassi · Regular Lassi<br>Masala Chai · Cold drinks</p>
+  <p class="abs c" style="top:1030px;font:700 48px/1.3 Fredoka">Order at the window or<br>call / WhatsApp <span style="color:#ffd23f">07405983207</span></p>
+  <p class="abs c foot">golgappa.uk</p>
+</div>
+
+</body>
+</html>
