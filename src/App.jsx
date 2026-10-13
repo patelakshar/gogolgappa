@@ -11,6 +11,7 @@ const INTL = `44${PHONE.slice(1)}` // tel: and wa.me want the international form
 const TEL = `tel:+${INTL}`
 const WA = `https://wa.me/${INTL}`
 const ext = { target: '_blank', rel: 'noopener noreferrer' }
+const MAP = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Gol Gappa, ' + CONTACT.address)}`
 
 // Entrance helper: every hero element rises from a small offset, staggered so the
 // eye is led nav -> badge -> headline -> copy -> CTA -> wheel -> window.
@@ -458,6 +459,7 @@ function Promo() {
 
 function Visit() {
   const rows = [
+    ['pin', 'Find us', CONTACT.address, MAP],
     ['phone', 'Call to order', PHONE, TEL],
     ['wa', 'Message us on WhatsApp', PHONE, WA],
     ['insta', "Today's spot on Instagram", `@${CONTACT.instagram}`, `https://instagram.com/${CONTACT.instagram}`],
@@ -472,7 +474,7 @@ function Visit() {
         <motion.header {...reveal}>
           <p className="eyebrow">Find the truck</p>
           <h2 id="visit-h">Hungry? Come say hi.</h2>
-          <p className="lead">Serving Cambridge and towns within 20 miles, including Ely, Newmarket, St Ives, Huntingdon, St Neots, Royston, Saffron Walden and Haverhill. Follow us on Instagram to see where we are today, or call or WhatsApp us to order.</p>
+          <p className="lead">Find us at {CONTACT.address}. We also serve Cambridge and towns within 20 miles, including Ely, Newmarket, St Ives, Huntingdon, St Neots, Royston, Saffron Walden and Haverhill. Follow us on Instagram to see where we are today, or call or WhatsApp us to order.</p>
         </motion.header>
         <motion.ul className="contact" variants={list} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
           {rows.map(([ic, label, val, href]) => (
@@ -565,7 +567,7 @@ export default function App() {
       <footer className="foot">
         <img src="/img/logo.webp" alt="Gol Gappa — Indian Street Food" width="880" height="470" loading="lazy" />
         <p>Crispy. Chatpata. Irresistible.</p>
-        <address>Indian street food truck · Cambridge, UK · <a href={TEL}>{PHONE}</a></address>
+        <address><a href={MAP} {...ext}>{CONTACT.address}</a> · <a href={TEL}>{PHONE}</a></address>
         <small>© {new Date().getFullYear()} Gol Gappa · Indian Street Food</small>
       </footer>
       <Schema />

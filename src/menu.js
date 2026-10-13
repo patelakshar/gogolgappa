@@ -3,6 +3,7 @@ export const CONTACT = {
   phone: '07405983207', // call + WhatsApp
   instagram: 'golgappa.uk',
   email: 'info.golgappadotcom@gmail.com',
+  address: '144 Cherry Hinton Road, Cambridge CB1 7AJ',
 }
 
 export const MAINS = [
@@ -147,7 +148,7 @@ export const SHOTS = [
 
 // Shown on the page and sent to Google as FAQPage data, so keep the two identical by keeping them here.
 export const FAQ = [
-  ['Where is the Gol Gappa food truck?', "We're an Indian street food truck based in Cambridge, UK, trading in Cambridge and towns within 20 miles, including Ely, Newmarket, St Ives, Huntingdon, St Neots, Royston, Saffron Walden and Haverhill. Follow @golgappa.uk on Instagram to see where we are today."],
+  ['Where is the Gol Gappa food truck?', "Find us at 144 Cherry Hinton Road, Cambridge CB1 7AJ. We also trade across Cambridge and towns within 20 miles, including Ely, Newmarket, St Ives, Huntingdon, St Neots, Royston, Saffron Walden and Haverhill. Follow @golgappa.uk on Instagram to see where we are today."],
   ['What is pani puri (gol gappa)?', 'Crispy, hollow puri shells filled with potato and chickpeas, then dipped in tangy mint and tamarind water. It goes by many names across India: pani puri, gol gappa, puchka and pani ke patashe.'],
   ["What's on the menu?", 'Pani puri and chaat (dahi puri, sev puri, bhel, papdi chaat, aloo tikki chaat, samosa chaat), vada pav, dabeli, Bombay sandwiches, aloo tikki burgers, wraps, samosas, spring rolls, fries, lassi, soft drinks and masala chai.'],
   ['Is the food vegetarian?', 'Yes. Everything on our menu is vegetarian.'],
