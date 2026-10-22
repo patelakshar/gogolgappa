@@ -213,8 +213,9 @@ function CardItems({ id }) {
 function useStageScale() {
   // Wheel + window are authored on a 1172px-wide stage and scaled as one unit.
   // Floor the scale so phones show a few big cards (the sides clip) instead of a tiny wheel.
-  // 1 on the server (prerender), real width in the browser
-  const get = () => typeof window === 'undefined' ? 1 : Math.min(1.25, Math.max(innerWidth < 600 ? 0.9 : 0.62, innerWidth / 1172))
+  // Same formula as the inline script in index.html, which sets --k before first paint.
+  // On the server (prerender) leave it unset so the page uses that early value.
+  const get = () => typeof window === 'undefined' ? undefined : Math.min(1.25, Math.max(innerWidth < 600 ? 0.9 : 0.62, innerWidth / 1172))
   const [k, setK] = useState(get)
   useEffect(() => {
     const on = () => setK(get())
@@ -276,9 +277,9 @@ function Hero() {
           <motion.span {...rise(15, 0.38, 0.9, EXPO, wipe)}>Crispy. Chatpata.</motion.span>
           <motion.span {...rise(15, 0.47, 0.9, EXPO, wipe)}>Irresistible.</motion.span>
         </h1>
-        <motion.p className="sub" {...rise(10, 0.69)}>
-          <b>Pani puri, vada pav, dabeli and chaat</b> — Indian street food in Cambridge,
-          served straight from the truck window.
+        <motion.p className="sub" {...rise(10, 0.69, 0.62, EXPO, { from: { opacity: 1 } })}>
+          <b>Pani puri, vada pav, dabeli and chaat</b> — vegetarian Indian street food on
+          Cherry Hinton Road, Cambridge, served straight from the truck window.
         </motion.p>
         <motion.div {...rise(13, 0.83, 0.62, EXPO, { from: { scale: 0.985 }, to: { scale: 1 } })}>
           <Btn href="#menu" className="cta">See the menu <Icon name="down" size={18} /></Btn>
@@ -354,9 +355,10 @@ const Squiggle = () => (
 function Items({ items }) {
   return (
     <motion.ul className="items" variants={list} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.15 }}>
-      {items.map(([name, ing]) => (
+      {items.map(([name, ing, price]) => (
         <motion.li key={name} variants={row} whileHover={{ x: 4 }} transition={{ duration: 0.2 }}>
           <span className="name">{name}</span>
+          {price && <span className="price">£{price}</span>}
           {ing && <span className="ing">{ing}</span>}
         </motion.li>
       ))}
@@ -507,7 +509,10 @@ function Faq() {
 
 // Menu + FAQ as schema.org data, built from the same content the page shows.
 function Schema() {
-  const item = ([name, description]) => ({ '@type': 'MenuItem', name, ...(description && { description }), suitableForDiet: 'https://schema.org/VegetarianDiet' })
+  const item = ([name, description, price]) => ({
+    '@type': 'MenuItem', name, ...(description && { description }), suitableForDiet: 'https://schema.org/VegetarianDiet',
+    ...(price && { offers: { '@type': 'Offer', price, priceCurrency: 'GBP' } }),
+  })
   const data = [
     {
       '@context': 'https://schema.org', '@type': 'Menu', '@id': 'https://golgappa.uk/#menu', name: 'Gol Gappa menu', inLanguage: 'en-GB',
@@ -554,7 +559,7 @@ export default function App() {
         <motion.div className="menu-head" {...reveal}>
           <p className="eyebrow">Our Indian street food menu</p>
           <h2>Everything on the board</h2>
-          <p className="lead">Pani puri, chaat, vada pav, dabeli, wraps, fries and something to sip. All vegetarian. Tap a category to jump straight to it.</p>
+          <p className="lead">Pani puri (gol gappa), chaat, vada pav, dabeli, Bombay sandwiches, wraps, samosas, fries, lassi and masala chai. All vegetarian, all made fresh in Cambridge. Tap a category to jump straight to it.</p>
         </motion.div>
         {MAINS.map((c, i) => <Category key={c.id} c={c} n={i} />)}
         <Sips />

@@ -5,9 +5,12 @@
     <link rel="icon" type="image/webp" href="/img/cut/chaat.webp" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="Gol Gappa is an Indian street food truck at 144 Cherry Hinton Road, Cambridge. Pani puri, chaat, vada pav, dabeli, samosas, wraps, lassi and masala chai, serving Cambridge and towns within 20 miles." />
+    <meta name="description" content="Vegetarian Indian street food truck on Cherry Hinton Road, Cambridge. Pani puri, chaat, vada pav, samosas and masala chai. Call or WhatsApp to order." />
     <meta name="theme-color" content="#1e7a34" />
-    <title>Gol Gappa | Indian Street Food Truck in Cambridge | Pani Puri &amp; Chaat</title>
+    <!-- hero wheel scale, set before first paint so the prerendered page doesn't jump (keep in sync with useStageScale) -->
+    <script>var w=innerWidth;document.documentElement.style.setProperty('--k',Math.min(1.25,Math.max(w<600?.9:.62,w/1172)))</script>
+    <title>Pani Puri &amp; Indian Street Food in Cambridge | Gol Gappa</title>
+    <meta name="keywords" content="pani puri Cambridge, gol gappa Cambridge, Indian street food Cambridge, chaat Cambridge, vada pav Cambridge, vegetarian street food Cambridge, food truck Cambridge, Cherry Hinton Road food, Indian snacks Cambridge, dabeli, masala chai" />
     <link rel="canonical" href="https://golgappa.uk/" />
     <meta name="geo.region" content="GB-CAM" />
     <meta name="geo.placename" content="Cambridge" />
@@ -17,8 +20,8 @@
     <meta property="og:site_name" content="Gol Gappa" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:url" content="https://golgappa.uk/" />
-    <meta property="og:title" content="Gol Gappa | Indian Street Food Truck in Cambridge" />
-    <meta property="og:description" content="Pani puri, chaat, vada pav, dabeli and masala chai from our food truck in Cambridge, UK." />
+    <meta property="og:title" content="Pani Puri &amp; Indian Street Food in Cambridge | Gol Gappa" />
+    <meta property="og:description" content="Fresh pani puri, chaat, vada pav and masala chai from our vegetarian food truck on Cherry Hinton Road, Cambridge." />
     <meta property="og:image" content="https://golgappa.uk/og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -37,7 +40,7 @@
       "telephone": "+447405983207",
       "email": "info.golgappadotcom@gmail.com",
       "servesCuisine": ["Indian", "Indian street food", "Chaat", "Vegetarian"],
-      "priceRange": "£",
+      "priceRange": "£1.99–£6.99",
       "currenciesAccepted": "GBP",
       "hasMenu": { "@id": "https://golgappa.uk/#menu" },
       "address": { "@type": "PostalAddress", "streetAddress": "144 Cherry Hinton Road", "addressLocality": "Cambridge", "addressRegion": "Cambridgeshire", "postalCode": "CB1 7AJ", "addressCountry": "GB" },
@@ -52,7 +55,9 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <!-- fonts load without blocking the first paint; system font shows until they arrive -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" /></noscript>
   </head>
   <body>
     <div id="root"></div>

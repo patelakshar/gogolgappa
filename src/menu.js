@@ -1,4 +1,5 @@
-// Transcribed from the printed truck menu.
+// Transcribed from the printed truck menu; prices from the handwritten price list.
+// Item: [name, ingredients, price in £]. Leave price off to show none.
 export const CONTACT = {
   phone: '07405983207', // call + WhatsApp
   instagram: 'golgappa.uk',
@@ -8,93 +9,88 @@ export const CONTACT = {
 
 export const MAINS = [
   {
-    id: 'chaat', title: 'Chaat', note: 'Indian street snacks', img: '/img/cut/chaat.webp',
-    alt: 'Plate of dahi puri chaat with sev and pomegranate',
+    id: 'chaat', title: 'Chaat', note: 'Pani puri & Indian street snacks', img: '/img/cut/chaat.webp',
+    alt: 'Plate of pani puri and dahi puri chaat with sev and pomegranate, Gol Gappa Cambridge',
     items: [
-      ['Pani Puri', 'Semolina puri shells, boiled potatoes, chickpeas, mint, coriander, green chilli, tamarind, spices, black salt'],
-      ['Ragda Puri', 'Puri, white peas (ragda), potatoes, tamarind chutney, mint chutney, onions, spices'],
-      ['Dahi Puri', 'Puri, yogurt, potatoes, tamarind chutney, mint chutney, sev, spices'],
-      ['Sev Puri', 'Papdi, potatoes, onions, tomatoes, tamarind chutney, mint chutney, sev'],
-      ['Bhel', 'Puffed rice, sev, peanuts, onions, tomatoes, chutneys, coriander, spices'],
-      ['Papdi Chaat', 'Papdi, yogurt, potatoes, chickpeas, chutneys, sev'],
-      ['Basket Chaat', 'Fried potato basket, potatoes, chickpeas, yogurt, chutneys, sev'],
-      ['Aloo Tikki Chaat', 'Potato tikki, chickpeas, yogurt, tamarind chutney, mint chutney, spices'],
-      ['Samosa Chaat', 'Samosa, chickpeas, yogurt, chutneys, onions, spices'],
+      ['Pani Puri', 'Semolina puri shells, boiled potatoes, chickpeas, mint, coriander, green chilli, tamarind, spices, black salt', '2.99'],
+      ['Dahi Puri', 'Puri, yogurt, potatoes, tamarind chutney, mint chutney, sev, spices', '4.99'],
+      ['Sev Puri', 'Papdi, potatoes, onions, tomatoes, tamarind chutney, mint chutney, sev', '5.99'],
+      ['Bhel', 'Puffed rice, sev, peanuts, onions, tomatoes, chutneys, coriander, spices', '4.99'],
+      ['Papdi Chaat', 'Papdi, yogurt, potatoes, chickpeas, chutneys, sev', '4.99'],
+      ['Samosa Chaat', 'Samosa, chickpeas, yogurt, chutneys, onions, spices', '4.99'],
     ],
   },
   {
     id: 'sandwiches', title: 'Sandwiches', note: 'Bombay-style, buttered and grilled', img: '/img/cut/sandwich.webp',
     alt: 'Grilled vegetable cheese sandwich',
     items: [
-      ['Bombay Sandwich', 'Bread, boiled potatoes, cucumber, tomato, onion, mint chutney, butter'],
-      ['Bombay Grilled Sandwich', 'Bread, vegetables, butter, cheese (optional), chutney'],
-      ['Aloo Matar Sandwich', 'Bread, potatoes, green peas, spices, butter'],
-      ['Cheese Sandwich', 'Bread, cheese, butter'],
-      ['Cheese Butter Jam Sandwich', 'Bread, butter, jam, cheese'],
-      ['Paneer Tikka Sandwich', 'Bread, paneer, yogurt marinade, spices, onions, capsicum'],
+      ['Bombay Sandwich', 'Bread, boiled potatoes, cucumber, tomato, onion, mint chutney, butter', '4.99'],
+      ['Bombay Grilled Sandwich', 'Bread, vegetables, butter, cheese (optional), chutney', '5.99'],
+      ['Cheese Sandwich', 'Bread, cheese, butter', '4.99'],
+      ['Schezwan Sandwich', 'Bread, vegetables, spicy Schezwan sauce, butter', '6.99'],
+      ['Paneer Tikka Sandwich', 'Bread, paneer, yogurt marinade, spices, onions, capsicum', '6.99'],
     ],
   },
   {
     id: 'burgers', title: 'Burgers', note: 'Crispy aloo tikki in a soft bun', img: '/img/cut/burger.webp',
     alt: 'Crispy tikki burger with lettuce and tomato',
     items: [
-      ['Aloo Tikki Burger', 'Bun, potato patty, lettuce, sauces'],
-      ['Aloo Tikki Cheese Burger', 'Bun, potato patty, cheese, sauces, veggies'],
+      ['Aloo Tikki Burger', 'Bun, potato patty, lettuce, sauces', '4.99'],
+      ['Aloo Tikki Cheese Burger', 'Bun, potato patty, cheese, sauces, veggies', '5.99'],
     ],
   },
   {
     id: 'wraps', title: 'Wraps', note: 'Rolled warm in flatbread', img: '/img/cut/wrap.webp',
     alt: 'Paneer wraps cut in half on paper',
     items: [
-      ['Vegetable Wrap', 'Flatbread, vegetables, sauces, chutney'],
-      ['Aloo Tikki Wrap', 'Flatbread, potato tikki, chutney, salad'],
-      ['Paneer Tikka Wrap', 'Flatbread, paneer, yogurt marinade, onions, capsicum'],
+      ['Vegetable Wrap', 'Flatbread, vegetables, sauces, chutney', '4.99'],
+      ['Aloo Tikki Wrap', 'Flatbread, potato tikki, chutney, salad', '5.49'],
+      ['Paneer Tikka Wrap', 'Flatbread, paneer, yogurt marinade, onions, capsicum', '6.99'],
     ],
   },
   {
     id: 'vadapav', title: 'Vada Pav', note: "Mumbai's favourite bun", img: '/img/cut/vadapav.webp',
     alt: 'Vada pav with green chutney and fried chilli',
     items: [
-      ['Bombay Vada Pav', 'Bun, fried potato vada, garlic chutney, green chutney'],
-      ['Butter Vada Pav', 'Bun, vada, butter, chutneys'],
-      ['Masala Fry Vada Pav', 'Vada, spices, butter, chutneys'],
-      ['Masala Cheese Vada Pav', 'Bun, vada, cheese, spices, chutneys'],
+      ['Bombay Vada Pav', 'Bun, fried potato vada, garlic chutney, green chutney', '3.99'],
+      ['Butter Vada Pav', 'Bun, vada, butter, chutneys', '4.99'],
+      ['Masala Fry Vada Pav', 'Vada, spices, butter, chutneys', '5.49'],
+      ['Masala Cheese Vada Pav', 'Bun, vada, cheese, spices, chutneys', '5.99'],
     ],
   },
   {
     id: 'dabeli', title: 'Dabeli', note: 'Sweet, spicy, crunchy', img: '/img/cut/dabeli.webp',
     alt: 'Dabeli topped with pomegranate, peanuts and sev',
     items: [
-      ['Butter Dabeli', 'Bun, mashed potato, dabeli masala, peanuts, pomegranate, chutneys, butter'],
-      ['Grilled Dabeli', 'Bun, mashed potato, dabeli masala, peanuts, pomegranate, chutneys, grilled with butter'],
-      ['Cheese Dabeli', 'Bun, potato filling, cheese, chutneys'],
+      ['Butter Dabeli', 'Bun, mashed potato, dabeli masala, peanuts, pomegranate, chutneys, butter', '3.99'],
+      ['Grilled Dabeli', 'Bun, mashed potato, dabeli masala, peanuts, pomegranate, chutneys, grilled with butter', '4.99'],
+      ['Cheese Dabeli', 'Bun, potato filling, cheese, chutneys', '5.99'],
     ],
   },
   {
     id: 'samosa', title: 'Samosa', note: 'Golden pastry, spiced filling', img: '/img/cut/samosa.webp',
     alt: 'Two samosas with tamarind chutney',
     items: [
-      ['Punjabi Samosa', 'Flour pastry, potato filling, peas, spices'],
-      ['Cocktail Samosa', 'Pastry, spiced potato filling'],
-      ['Chinese Paneer Samosa', 'Pastry, paneer, noodles, soy sauce, vegetables'],
+      ['Punjabi Samosa', 'Flour pastry, potato filling, peas, spices', '2.49'],
+      ['Cocktail Samosa', 'Pastry, spiced potato filling', '2.99'],
+      ['Chinese Paneer Samosa', 'Pastry, paneer, noodles, soy sauce, vegetables', '3.99'],
     ],
   },
   {
     id: 'springroll', title: 'Spring Roll', note: 'Indo-Chinese crunch', img: '/img/cut/springroll.webp',
     alt: 'Vegetable spring rolls with dipping sauce',
     items: [
-      ['Vegetable Spring Roll', 'Wrapper, cabbage, carrot, capsicum, soy sauce'],
-      ['Cheese Spring Roll', 'Wrapper, vegetables, cheese'],
+      ['Vegetable Spring Roll', 'Wrapper, cabbage, carrot, capsicum, soy sauce', '2.99'],
+      ['Cheese Spring Roll', 'Wrapper, vegetables, cheese', '3.99'],
     ],
   },
   {
     id: 'fries', title: 'Fries', note: 'Salted, spiced or loaded', img: '/img/cut/fries.webp',
     alt: 'Bowl of spiced fries',
     items: [
-      ['Regular Fries', 'Potatoes, salt, oil'],
-      ['Peri-Peri Fries', 'Potatoes, peri-peri seasoning'],
-      ['Cheesy Loaded Fries', 'Potatoes, cheese sauce, herbs'],
-      ['Potato Wedges', 'Potatoes, spices, oil'],
+      ['Regular Fries', 'Potatoes, salt, oil', '2.99'],
+      ['Peri-Peri Fries', 'Potatoes, peri-peri seasoning', '3.50'],
+      ['Cheesy Loaded Fries', 'Potatoes, cheese sauce, herbs', '4.99'],
     ],
   },
 ]
@@ -103,15 +99,16 @@ export const SIPS = [
   {
     id: 'lassi', title: 'Lassi', img: '/img/cut/lassi.webp', alt: 'Glass of lassi topped with pistachio and saffron',
     items: [
-      ['Regular Lassi', 'Yogurt, sugar or salt, cardamom'],
-      ['Mango Lassi', 'Yogurt, mango pulp, sugar'],
+      ['Regular Lassi', 'Yogurt, sugar or salt, cardamom', '3.99'],
+      ['Mango Lassi', 'Yogurt, mango pulp, sugar', '4.99'],
+      ['Dry Fruit Lassi', 'Yogurt, mixed dry fruits, sugar', '4.99'],
     ],
   },
   {
     id: 'drinks', title: 'Drinks', img: '/img/cut/drinks.webp', alt: 'Iced cola with a lemon slice',
-    items: [['Coca-Cola'], ['Pepsi'], ['Sprite']],
+    items: [['Coca-Cola', '', '2.50'], ['Pepsi', '', '2.50'], ['Sprite', '', '2.50']],
   },
-  { id: 'chai', title: 'Chai', img: '/img/cut/chai.webp', alt: 'Masala chai in a clay kulhad', items: [['Masala Tea']] },
+  { id: 'chai', title: 'Chai', img: '/img/cut/chai.webp', alt: 'Masala chai in a clay kulhad', items: [['Masala Tea', '', '1.99']] },
 ]
 
 export const ALL = [...MAINS, ...SIPS]
@@ -149,8 +146,9 @@ export const SHOTS = [
 // Shown on the page and sent to Google as FAQPage data, so keep the two identical by keeping them here.
 export const FAQ = [
   ['Where is the Gol Gappa food truck?', "Find us at 144 Cherry Hinton Road, Cambridge CB1 7AJ. We also trade across Cambridge and towns within 20 miles, including Ely, Newmarket, St Ives, Huntingdon, St Neots, Royston, Saffron Walden and Haverhill. Follow @golgappa.uk on Instagram to see where we are today."],
+  ['Where can I get pani puri in Cambridge?', 'At Gol Gappa, 144 Cherry Hinton Road, Cambridge CB1 7AJ. We make pani puri, dahi puri and sev puri fresh at the truck window, along with chaat, vada pav and masala chai.'],
   ['What is pani puri (gol gappa)?', 'Crispy, hollow puri shells filled with potato and chickpeas, then dipped in tangy mint and tamarind water. It goes by many names across India: pani puri, gol gappa, puchka and pani ke patashe.'],
-  ["What's on the menu?", 'Pani puri and chaat (dahi puri, sev puri, bhel, papdi chaat, aloo tikki chaat, samosa chaat), vada pav, dabeli, Bombay sandwiches, aloo tikki burgers, wraps, samosas, spring rolls, fries, lassi, soft drinks and masala chai.'],
+  ["What's on the menu?", 'Pani puri and chaat (dahi puri, sev puri, bhel, papdi chaat, samosa chaat), vada pav, dabeli, Bombay sandwiches, aloo tikki burgers, wraps, samosas, spring rolls, fries, lassi, soft drinks and masala chai.'],
   ['Is the food vegetarian?', 'Yes. Everything on our menu is vegetarian.'],
   ['How do I order?', 'Come to the truck window, or call or WhatsApp us on 07405983207.'],
   ['When do you open, and is there a Diwali offer?', 'Our opening day is Sunday 8 November 2026, on Diwali. On Diwali day, pani puri, dahi puri and sev puri are £1.99 each, cash only.'],
